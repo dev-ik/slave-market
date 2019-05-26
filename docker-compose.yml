@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  php:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    working_dir: /slavemarket
+    volumes:
+      - .:/slavemarket
+      - .docker/php/php.d/15-xdebug.ini:/etc/php.d/15-xdebug.ini
