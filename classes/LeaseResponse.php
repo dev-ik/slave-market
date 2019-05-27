@@ -31,6 +31,7 @@ class LeaseResponse extends BaseObject {
 
 	/**
 	 * @Description Set lease agreements
+	 *
 	 * @param LeaseAgreement $leaseAgreement
 	 */
 	public function setLeaseAgreement( LeaseAgreement $leaseAgreement ): void {
@@ -39,6 +40,7 @@ class LeaseResponse extends BaseObject {
 
 	/**
 	 * @Description Adding error message to error list
+	 *
 	 * @param string $message
 	 */
 	public function addErrors( string $message ): void {

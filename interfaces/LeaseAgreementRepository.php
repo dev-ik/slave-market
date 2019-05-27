@@ -13,6 +13,6 @@ interface LeaseAgreementRepository {
 	 *
 	 * @return null|LeaseAgreement
 	 */
-	public function getForSlave(int $slaveId, string $timeFrom, string $timeTo ): ?LeaseAgreement;
+	public function getForSlave( int $slaveId, string $timeFrom, string $timeTo ): ?LeaseAgreement;
 
 }

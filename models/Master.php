@@ -34,7 +34,7 @@ class Master extends BaseObject {
 	 */
 	public function __construct( int $id, string $name, bool $vip ) {
 		parent::__construct();
-		$this->id = $id;
+		$this->id   = $id;
 		$this->name = $name;
 		$this->vip  = $vip;
 	}
