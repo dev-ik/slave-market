@@ -35,7 +35,8 @@ CREATE TABLE IF NOT EXISTS `slave` (
 ) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
 
 -- Получить минимальную, максимальную и среднюю стоимость всех рабов весом более 60 кг.
-SELECT MIN(slave.price) AS min, AVG(slave.price) AS avg , MAX(slave.price) AS maximum  FROM slave WHERE slave.weight >= 60000
+-- Вес в БД хранится в грамах, поэтому ищем более 60000 гр.
+SELECT MIN(slave.price) AS min, AVG(slave.price) AS avg , MAX(slave.price) AS maximum  FROM slave WHERE slave.weight > 60000
 
 -- Выбрать категории, в которых больше 10 рабов.
 SELECT cat.name FROM category cat INNER JOIN category_slave csl ON cat.id = csl.category_id GROUP BY cat.id HAVING COUNT(cat.id) >= 10
